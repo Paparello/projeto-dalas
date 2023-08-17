@@ -16,5 +16,19 @@ function fnOrdenar(vetor){
     });    
 } 
 
-export {fnCapitalizar, fnOrdenar};
+function fnCaixaAlta(vetor){
+    var modificado = [];
+    
+    for(var i=0; i<vetor.length; i++){
+        modificado[i] = vetor[i].toUpperCase();
+    }
+    return modificado;
+}
+
+export default {
+    capitalizar:fnCapitalizar,
+    ordenar: fnOrdenar,
+    caixaAlta: fnCaixaAlta
+};
+
 
