@@ -1,8 +1,6 @@
-import capitalizar from './modificador.js';
-import ordenar from './modificador.js';
+import modificador from './modificador.js';
 
-let ingredientes = ['mel', 'água', 'sal', 'mostarda'];
-
+    var ingredientes = ['mel', 'água', 'sal', 'mostarda'];
     var resCapitalizado = capitalizar(ingredientes);
     var resOrdenado = ordenar(resCapitalizado);
 
