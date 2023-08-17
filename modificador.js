@@ -16,8 +16,5 @@ function fnOrdenar(vetor){
     });    
 } 
 
-export default {
-    capitalizar: fnCapitalizar,
-    ordenar: fnOrdenar
-};
-    
+export {fnCapitalizar, fnOrdenar};
+

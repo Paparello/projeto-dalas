@@ -1,4 +1,6 @@
-import modificador from './modificador.js';
+import fnCapitalizar from './modificador.js';
+
+console.log(fnCapitalizar);
 
     var ingredientes = ['mel', 'água', 'sal', 'mostarda'];
     var resCapitalizado = capitalizar(ingredientes);
