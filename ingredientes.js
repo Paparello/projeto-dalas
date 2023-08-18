@@ -1,5 +1,5 @@
 var ingredientes = [
-    {nome:'Alface', valor:2.5},{nome:'Tomate', valor:1},{nome:'Cebola',valor:0.7}
+    {nome:'alface', valor:2.5},{nome:'tomate', valor:1},{nome:'cebola',valor:0.7}
 ]
 
 export default ingredientes;

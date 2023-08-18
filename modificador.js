@@ -1,3 +1,11 @@
+function fnCapitalizarNovo(colecao, atributo){
+    if(typeof colecao[0] == 'object'){
+        
+    }
+
+    
+}
+
 function fnCapitalizar(vetor){
     var modificado = [];
 
@@ -26,7 +34,8 @@ function fnCaixaAlta(vetor){
 }
 
 export default {
-    capit:fnCapitalizar,
+    capit: fnCapitalizar,
+    capitNovo: fnCapitalizarNovo,
     ordem: fnOrdenar,
     cxAlta: fnCaixaAlta
 };
