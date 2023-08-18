@@ -26,9 +26,9 @@ function fnCaixaAlta(vetor){
 }
 
 export default {
-    capitalizar:fnCapitalizar,
-    ordenar: fnOrdenar,
-    caixaAlta: fnCaixaAlta
+    capit:fnCapitalizar,
+    ordem: fnOrdenar,
+    cxAlta: fnCaixaAlta
 };
 
 
