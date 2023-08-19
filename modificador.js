@@ -1,9 +1,11 @@
 function fnCapitalizarNovo(colecao, atributo){
     if(typeof colecao[0] == 'object'){
-        
+        var res = colecao.map(function(obj){
+            obj.nome = 'teste';  
+            return obj;
+        });
+         console.log(res);  
     }
-
-    
 }
 
 function fnCapitalizar(vetor){

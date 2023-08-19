@@ -1,9 +1,11 @@
 import modificador from './modificador.js';
 import ingredientes from './ingredientes.js';
 
-console.log(ingredientes);
-console.log(typeof ingredientes);
-console.log(Array.isArray(ingredientes));
+modificador.capitNovo(ingredientes, 'nome');
+
+//console.log(ingredientes);
+//console.log(typeof ingredientes);
+//console.log(Array.isArray(ingredientes));
 
 /*var ingredientes = ['mel', 'água', 'sal', 'mostarda'];
 var resCapitalizado = modificador.capit(ingredientes);
