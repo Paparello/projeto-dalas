@@ -1,3 +1,8 @@
+/*Final da aula capitalizarNovo
+Preservei o modificador.js até o if da colecao
+Falta fazer o else (se for um vetor de strings e não objetos) daqui pra frente.
+Se não der certo, voltar este arquivo para modificador.js
+*/
 function fnCapitalizarNovo(colecao, atributo){
     if(typeof colecao[0] == 'object'){
         var resultado = colecao.map(function(obj){

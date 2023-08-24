@@ -1,13 +1,12 @@
 function fnCapitalizarNovo(colecao, atributo){
     if(typeof colecao[0] == 'object'){
         var resultado = colecao.map(function(obj){
-            var letraInicial = obj[atributo].charAt(0).toUpperCase();
-            var restoTexto = obj[atributo].slice(1);
-
-            obj[atributo] = letraInicial+restoTexto;  
+            obj[atributo] = 'teste';
+            //definido em app.js que o atributo é 'nome'!!!
+            //a partir daqui alterei o modificador para poder capitalizar
             return obj;
         });
-        console.log(resultado);  
+         console.log(resultado);  
     }
 }
 
