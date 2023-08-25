@@ -8,7 +8,18 @@ function fnCapitalizarNovo(colecao, atributo){
             return obj;
         });
         console.log(resultado);  
+    } 
+    else if(typeof colecao[0] == 'string'){
+        var modificado = [];
+
+        for(var i=0; i<colecao.length; i++){
+            var letraInicial = colecao[i].charAt(0).toUpperCase();
+            var restoTexto = colecao[i].slice(1); 
+            var resultado = letraInicial+restoTexto;       
+            modificado[i] = resultado;
+        }
     }
+    console.log(modificado);
 }
 
 function fnCapitalizar(vetor){
