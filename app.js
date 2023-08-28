@@ -2,7 +2,7 @@ import modificador from './modificador.js';
 import ingredientes from './ingredientes.js';
 
 //var ingredientes = ['mel', 'água', 'sal', 'mostarda'];
-//modificador.capitNovo(ingredientes, 'nome');
+modificador.capitNovo(ingredientes, 'nome');
 
 //console.log(ingredientes);
 //console.log(typeof ingredientes);

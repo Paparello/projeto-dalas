@@ -1,12 +1,3 @@
-//Utilizei este vetor para ir testando o código.
-
-/*
-var ingredientes = [
-    {nome:'alface', valor:2.5},{nome:'tomate', valor:1},{nome:'cebola', valor:0.7}
-]
-*/
-
-
 const ingredientes = [
     {
         nome: 'carne',
