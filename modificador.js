@@ -1,59 +1,43 @@
-function fnCapitalizarNovo(colecao, atributo){
-    if(typeof colecao[0] == 'object'){
-        var resultado = colecao.map(function(obj){
-            var letraInicial = obj[atributo].charAt(0).toUpperCase();
-            var restoTexto = obj[atributo].slice(1);
-
-            obj[atributo] = letraInicial+restoTexto;  
-            return obj;
-        });
-        console.log(resultado);  
-    } 
-    else if(typeof colecao[0] == 'string'){
-        var modificado = [];
-
-        for(var i=0; i<colecao.length; i++){
-            var letraInicial = colecao[i].charAt(0).toUpperCase();
-            var restoTexto = colecao[i].slice(1); 
-            var resultado = letraInicial+restoTexto;       
-            modificado[i] = resultado;
+function fnCapitalizar(colecao, attr){
+    if (colecao.length > 0){
+        if (typeof colecao[0] == 'object' && attr){
+            colecao.map(item => item[attr] = item[attr].charAt(0).toUpperCase() + item[attr].slice(1));
+        }else{
+            colecao.map(item => item = item.charAt(0).toUpperCase() + item.slice(1));
         }
+        
+        return colecao;
     }
-    console.log(modificado);
 }
 
-function fnCapitalizar(vetor){
-    var modificado = [];
-
-    for(var i=0; i<vetor.length; i++){
-        var letraInicial = vetor[i].charAt(0).toUpperCase();
-        var restoTexto = vetor[i].slice(1); 
-        var resultado = letraInicial+restoTexto;       
-        modificado[i] = resultado;
+function fnCaixaAlta(colecao, attr){
+    if (colecao.length > 0){
+        if (typeof colecao[0] == 'object' && attr){
+            colecao.map(item => item[attr] = item[attr].toUpperCase());
+        }else{
+            colecao.map(item => item = item.toUpperCase());
+        }
+        
+        return colecao;
     }
-    return modificado;
-}      
-   
-function fnOrdenar(vetor){
-    return vetor.sort(function(a,b){
-        return a.localeCompare(b);   
-    });    
-} 
+}
 
-function fnCaixaAlta(vetor){
-    var modificado = [];
-    
-    for(var i=0; i<vetor.length; i++){
-        modificado[i] = vetor[i].toUpperCase();
-    }
-    return modificado;
+function fnOrdenar(colecao, attr){    
+    return attr ?
+        colecao.sort(function(a,b){
+            return typeof a[attr] == 'number' ?
+                a[attr] - b[attr] :
+                a[attr].localeCompare(b[attr])
+        }):
+        colecao.sort(function(a,b){
+            return typeof a == 'number' ?
+                a - b :
+                a.localeCompare(b)
+        });
 }
 
 export default {
-    capit: fnCapitalizar,
-    capitNovo: fnCapitalizarNovo,
-    ordem: fnOrdenar,
-    cxAlta: fnCaixaAlta
+    capitalizar: fnCapitalizar,
+    ordenar: fnOrdenar,
+    caixaAlta: fnCaixaAlta
 };
-
-
