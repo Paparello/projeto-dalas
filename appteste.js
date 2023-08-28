@@ -6,6 +6,18 @@ import ingredientes from './ingredientes.js';
 //var ingredientes = ['mel', 'água', 'sal', 'mostarda'];
 modificador.capitNovo(ingredientes, 'nome');
 
+/*
+let ingredientesOrdenados = modificador.ordem(ingredientes, 'nome');
+console.log(ingredientesOrdenados);
+*/
+
+/*
+<div class="ingrediente">
+                <img src="img/carne.png" alt="abobora"/>
+                <p class="nome-ingrediente">Carne</p>
+            </div>
+*/
+
 //console.log(ingredientes);
 //console.log(typeof ingredientes);
 //console.log(Array.isArray(ingredientes));

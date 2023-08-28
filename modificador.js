@@ -1,4 +1,7 @@
 //Preservei o modificador depois de incluir o else em capitalizarNovo.
+
+
+
 function fnCapitalizarNovo(colecao, atributo){
     if(typeof colecao[0] == 'object'){
         var resultado = colecao.map(function(obj){
