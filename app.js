@@ -2,9 +2,10 @@ import modificador from './modificador.js';
 import ingredientes from './ingredientes.js';
 
 //var ingredientes = ['mel', 'água', 'sal', 'mostarda'];
-modificador.capitNovo(ingredientes, 'nome');
+//modificador.capitNovo(ingredientes, 'nome');
 
-let ingredientesOrdenados = modificador.ordemNovo(ingredientes,'nome');
+let ingredientesOrdenados = modificador.ordemNovo(ingredientes, 'nome');
+let ingredientesCapitalizados = modificador.capitNovo(ingredientes, 'nome');
 let containerIngredientes = document.getElementById('container-ingredientes');
 
 for(let ingrediente of ingredientesOrdenados){
@@ -13,7 +14,7 @@ for(let ingrediente of ingredientesOrdenados){
             <p class="nome-ingrediente">${ingrediente.nome}</p>
         </div>`;
         containerIngredientes.innerHTML += textoHTML;
-    }
+}
 
 
 /* TEMPLATE STRING:
