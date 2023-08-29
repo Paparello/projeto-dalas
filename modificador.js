@@ -1,8 +1,6 @@
 //Preservei o modificador depois de incluir o else em capitalizarNovo.
 
-
-
-function fnCapitalizarNovo(colecao, atributo){
+function fnCapitalizar(colecao, atributo){
     if(typeof colecao[0] == 'object'){
         var resultado = colecao.map(function(obj){
             var letraInicial = obj[atributo].charAt(0).toUpperCase();
@@ -26,7 +24,7 @@ function fnCapitalizarNovo(colecao, atributo){
     console.log(modificado);
 }
 
-function fnCapitalizar(vetor){
+function fnCapitalizarVelho(vetor){
     var modificado = [];
 
     for(var i=0; i<vetor.length; i++){
@@ -36,12 +34,26 @@ function fnCapitalizar(vetor){
         modificado[i] = resultado;
     }
     return modificado;
-}      
+} 
+
+function fnOrdenar(colecao, attr){    
+    return attr ?
+        colecao.sort(function(a,b){
+            return typeof a[attr] == 'number' ?
+                a[attr] - b[attr] :
+                a[attr].localeCompare(b[attr])
+        }):
+        colecao.sort(function(a,b){
+            return typeof a == 'number' ?
+                a - b :
+                a.localeCompare(b)
+        });
+}
    
-function fnOrdenar(vetor){
+function fnOrdenarVelho(vetor){
     return vetor.sort(function(a,b){
         return a.localeCompare(b);   
-    });    
+    });
 } 
 
 function fnCaixaAlta(vetor){
@@ -54,9 +66,10 @@ function fnCaixaAlta(vetor){
 }
 
 export default {
-    capit: fnCapitalizar,
-    capitNovo: fnCapitalizarNovo,
-    ordem: fnOrdenar,
+    capitNovo: fnCapitalizar,
+    ordemNovo:fnOrdenar,
+    capit: fnCapitalizarVelho,
+    ordem: fnOrdenarVelho,
     cxAlta: fnCaixaAlta
 };
 
